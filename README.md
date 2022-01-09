@@ -1,12 +1,12 @@
 # Capital Gains
 
 A aplicação recebe uma lista de transações e verifica se estas são passiveis de tributação, e em caso positivo, calcula
-o valor do tibuto para cada uma das trasações, e ainda abatendo possíveis perdas anteriores.
+o valor do tributo para cada uma das transações abatendo possíveis perdas anteriores.
 
 O projeto foi desenvolvido utilizando:
 
 - [Java](https://www.oracle.com/java/) :: linguagem utilizando no desenvolvimento da aplicação.
-- [Maven](https://maven.apache.org/) :: ferramente para gestão de dependências e construção da aplicação.
+- [Maven](https://maven.apache.org/) :: ferramenta para gestão de dependências e construção da aplicação.
 - [Jackson](https://github.com/FasterXML/jackson-docs) :: processador JSON. Utilizado na conversão de JSON para
   entidades do projeto e vice-versa.
 - [Lombok](https://projectlombok.org/) :: redução de boilarplate.
@@ -47,7 +47,7 @@ docker run -it capital-gains
 
 ### Maven / Jar
 
-Para executar a aplicação utilizando o arquivo jar, precisamos construi-ló utilizando o Maven. Para isso basta executar
+Para executar a aplicação utilizando o arquivo jar, precisamos construí-lo utilizando o Maven. Para isso basta executar
 o comando abaixo na raiz do projeto:
 
 ```
@@ -78,9 +78,9 @@ O retorno será uma lista de impostos a serem pagos (também em formato JSON), s
 A aplicação permite que o procedimento seja executado quantas vezes o usuários desejar.  
 Para encerrar basta informar um "linha em branco".
 
-## Decisões tecnicas
+## Decisões técnicas
 
-A aplicação realiza o calculo de prejuizo/imposto a cada transação da lista que é adicionada a "Carteira de ações" do
+A aplicação realiza o cálculo de prejuízo/imposto a cada transação da lista que é adicionada a "Carteira de ações" do
 usuário. Para identificar se a transação precisa realizar algum destes calculos, foi utilizado o pattern Chain of
-Responsibility. O percentual de imposto a ser pago e a faixa a que ele esta atrelado, foram isolados em Enum. Caos uma
-nova faixa de imposto venha a ser criada, basta adicionar a mesma ao Enum.
+Responsibility. O percentual de imposto a ser pago e a faixa a que ele está atrelado, foram isolados em uma classe. Caso uma
+nova faixa de imposto venha a ser criada, basta adicionar a mesma a esta classe e a regra passara a ser aplicada.
