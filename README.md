@@ -11,7 +11,7 @@ O projeto foi desenvolvido utilizando:
   entidades do projeto e vice-versa.
 - [Lombok](https://projectlombok.org/) :: redução de boilarplate.
 - [Junit](https://junit.org/junit5/) :: implementação de testes.
-- [AssertJ](https://assertj.github.io/doc/) :: escrita de testes mais de maneiras mais "fluente".
+- [AssertJ](https://assertj.github.io/doc/) :: escrita de testes de maneiras mais "fluente".
 - [Docker](https://www.docker.com/) :: utilizado na conteinerização da aplicação.
 
 ## Executando os testes
